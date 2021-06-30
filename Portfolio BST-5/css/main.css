@@ -1,0 +1,30 @@
+.jumbotron {
+  background: #a2d9ff;
+  padding-top: 6rem;
+}
+
+.jumbotron img {
+  width: 200px;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+#projects {
+  background: #a2d9ff;
+}
+
+#footer p {
+  margin: 0;
+  padding: 0 0 50px;
+}
+
+#footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer p a:hover {
+  color: #a2d9ff;
+}

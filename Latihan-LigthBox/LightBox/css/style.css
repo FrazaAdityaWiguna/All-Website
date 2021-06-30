@@ -1,0 +1,96 @@
+/*Font*/
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/font/BebasNeue-Bold.ttf') format('truetype');
+}
+
+
+/* Main Style */
+
+body {
+    font: 18px/38px 'BebasNeue', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px #663491;
+}
+
+.container {
+    width: 750px;
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.galery li {
+    width: 156px;
+    height: 156px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #666;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.galery li,
+.galery li img,
+.galery li span {
+    border-radius: 50%;
+}
+
+.galery li span {
+    display: block;
+    width: 156px;
+    height: 156px;
+    background-color: rgba(200, 200, 200, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 156px;
+    color: #00ff2a;
+    text-shadow: 1px 1px 1px #35cf06;
+    opacity: 0;
+    transform: scale(0) rotate(0);
+    transition: .3s;
+}
+
+.galery li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* Overlay */
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: .5s;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+}
